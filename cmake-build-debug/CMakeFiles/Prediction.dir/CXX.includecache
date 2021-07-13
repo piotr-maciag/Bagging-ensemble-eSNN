@@ -1,0 +1,62 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/LoadData.h
+iostream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/iostream
+algorithm
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/algorithm
+vector
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/vector
+fstream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/fstream
+sstream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/sstream
+math.h
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/math.h
+chrono
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/chrono
+random
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/random
+iomanip
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/iomanip
+eSNN.h
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/eSNN.h
+cstdlib
+-
+ctime
+-
+
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/eSNN.h
+iostream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/iostream
+algorithm
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/algorithm
+vector
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/vector
+fstream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/fstream
+sstream
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/sstream
+math.h
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/math.h
+chrono
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/chrono
+random
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/random
+iomanip
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/iomanip
+
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/main.cpp
+iostream
+-
+eSNN.h
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/eSNN.h
+LoadData.h
+/Users/piotr/Praca/Nauka/Publikacje/Ensemble eSNN/Software/Prediction/LoadData.h
+
