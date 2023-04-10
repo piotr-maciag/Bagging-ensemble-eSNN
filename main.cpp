@@ -34,11 +34,11 @@ int main() {
     vector<double> IA_vect;
 
     fstream resultsComb;
-    resultsComb.open("../Results/Warsaw/Test2/ResultsCombined.csv", fstream::out);
+    resultsComb.open("../Results/Warsaw preprocessed/Test2/ResultsCombined.csv", fstream::out);
     resultsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",N" << ",RealValue,PredValue" << endl;
 
     fstream errorsComb;
-    errorsComb.open("../Results/Warsaw/Test2/ErrorsCombined.csv", fstream::out);
+    errorsComb.open("../Results/Warsaw preprocessed/Test2/ErrorsCombined.csv", fstream::out);
     errorsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",NIsize" << ",simTr,N,RMSE,MAE,MAPE,IA" << endl;
 
 
@@ -219,7 +219,7 @@ int main() {
                         //SaveRMSE("../Results/EnsembleComb/TestingEnsembleIA.csv", ensNum, simTrNum, IA_vect);
 
 
-                        //SaveResults("../Datasets/Warsaw/ResultsTraining.csv", trainingDataset);
+                        //SaveResults("../Datasets/Warsaw preprocessed/ResultsTraining.csv", trainingDataset);
                     }
                 }
 
