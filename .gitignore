@@ -7,3 +7,5 @@
 snntorch
 Ursynow.csv
 /Results/Warsaw preprocessed
+/.idea
+/cmake-build-debug
