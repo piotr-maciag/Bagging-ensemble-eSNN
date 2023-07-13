@@ -9,14 +9,13 @@ int main() {
     vector<string> hours = {"1"};
 
     vector<int> ensNum = {1,
-                          //5, 10, 15, 20, 25, 30, 35, 40,
-                          50,
-                          //60,
+                          5, 10, 15, 20, 25, 30, 35, 40,
+                          50, 55,
+                          60
                           //100
     };
-    vector<double> simTrNum = {0.01, 0.013, 0.014, 0.015, 0.016, 0.017, 0.018, 0.019, 0.02, 0.021,
-                               0.022, 0.023, 0.024, 0.025}; //0.04, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 };
-    vector<int> NIsizeNum = {45, 50, 55, 60, 65};
+    vector<double> simTrNum = {0.02}; //0.04, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 };
+    vector<int> NIsizeNum = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80};
     int trials = 1;
 
     vector<double> RMSE_vect;
@@ -25,11 +24,11 @@ int main() {
     vector<double> IA_vect;
 
     fstream resultsComb;
-    resultsComb.open("../Results/Warsaw preprocessed/Simple_dataset/ResultsCombined.csv", fstream::out);
+    resultsComb.open("../Results/Warsaw preprocessed/NIsize/ResultsCombined.csv", fstream::out);
     resultsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",N" << ",RealValue,PredValue" << endl;
 
     fstream errorsComb;
-    errorsComb.open("../Results/Warsaw preprocessed/Simple_dataset/MeasuresCombined.csv", fstream::out);
+    errorsComb.open("../Results/Warsaw preprocessed/NIsize/MeasuresCombined.csv", fstream::out);
     errorsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",NIsize" << ",simTr,N,RMSE,MAE,MAPE,IA" << endl;
 
 
@@ -72,9 +71,9 @@ int main() {
 //                                            sites[d2] + "_" + hours[d3] + "_" + "Testing.csv",
 //                                            testDataset);
 
-                                LoadDataset("../Datasets/Warsaw preprocessed/TrainingDataset.csv",
+                                LoadDataset("../Datasets/Warsaw preprocessed/TrainingDatasetModelsFirst.csv",
                                             trainingDataset);
-                                LoadDataset("../Datasets/Warsaw preprocessed/TestDataset.csv",
+                                LoadDataset("../Datasets/Warsaw preprocessed/TestDatasetModelsFirst.csv",
                                             testDataset);
                                 cout << "Loaded" << endl;
 
