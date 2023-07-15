@@ -14,8 +14,9 @@ int main() {
                           60
                           //100
     };
-    vector<double> simTrNum = {0.02}; //0.04, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 };
-    vector<int> NIsizeNum = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80};
+    vector<double> simTrNum = {0.01, 0.011, 0.012, 0.013, 0.014, 0.015, 0.016, 0.017, 0.018, 0.019,
+                               0.020, 0.021, 0.022, 0.023, 0.024, 0.025};
+    vector<int> NIsizeNum = {50, 55, 60, 65, 70, 75, 80, 85, 90, 100};
     int trials = 1;
 
     vector<double> RMSE_vect;
@@ -24,11 +25,11 @@ int main() {
     vector<double> IA_vect;
 
     fstream resultsComb;
-    resultsComb.open("../Results/Warsaw preprocessed/NIsize/ResultsCombined.csv", fstream::out);
-    resultsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",N" << ",RealValue,PredValue" << endl;
+    resultsComb.open("../Results/Warsaw preprocessed/Second_layer/ResultsCombined.csv", fstream::out);
+    resultsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",NIsize,simTr,N" << ",RealValue,PredValue" << endl;
 
     fstream errorsComb;
-    errorsComb.open("../Results/Warsaw preprocessed/NIsize/MeasuresCombined.csv", fstream::out);
+    errorsComb.open("../Results/Warsaw preprocessed/Second_layer/MeasuresCombined.csv", fstream::out);
     errorsComb << "Pollutant" << "," << "Site" << "," << "Hour" << ",NIsize" << ",simTr,N,RMSE,MAE,MAPE,IA" << endl;
 
 
@@ -135,7 +136,9 @@ int main() {
                                     RMSE += pow((toPredict->realValues[i] - toPredict->predictedValues[i]), 2);
                                     MAE += abs((toPredict->realValues[i] - toPredict->predictedValues[i]));
                                     resultsComb << pollutants[d1] << "," << sites[d2] << "," << hours[d3] << "," <<
-                                    ensNum[p1] << "," <<
+                                    to_string(NIsize) << "," <<
+                                    to_string(simTr) << "," <<
+                                    to_string(N) + "," <<
                                                 toPredict->realValues[i] << "," << sumPrediction / double(N) << endl;
 
                                 }
